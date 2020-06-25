@@ -68,7 +68,7 @@ JS and PHP backend is completely original
                     <div class="col-xl-4 vr-tm-toptable float-right">
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Hoverable Table</h6>
+                                <h6 class="card-title">Top Imgs</h6>
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>
