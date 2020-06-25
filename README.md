@@ -6,3 +6,6 @@ Prnt.sc is a site that lets you upload screenshots so you can share them with a 
 
 # Tech info
 You might be thinking a simple ajax request could do the trick but that is blocked by CORS. So I had to do the scraping with PHP.
+
+# Live demo
+https://viljamiranta.fi/projects/prnt/
