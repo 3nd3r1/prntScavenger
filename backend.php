@@ -50,7 +50,7 @@ if(isset($_GET["img"]))
     }
 
 }
-if(isset($_POST["like"]))
+if(isset($_POST["like"]) && !$config["demo"])
 {
     require("db.php");
     $code = $_POST["like"];
