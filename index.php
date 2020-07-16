@@ -1,23 +1,23 @@
 <?php
-include("db.php");
+$config["demo"] = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <!--
 
-Theme is from hackerthemes.com.
-All vr- class tags are my own.
+    Author: Viljami Ranta
+    Site: viljamiranta.fi
+    GitHub: prntScavenger
 
-JS and PHP backend is completely original 
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="/projects/prnt/css/bootstrap4-bubblegum.min.css">
-    <link rel="stylesheet" href="/projects/prnt/css/main.css?v=20">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap4-bubblegum.min.css">
+    <link rel="stylesheet" href="/css/main.css?v=20">
+    <title>Prnt.sc Scavenger</title>
 </head>
 <!-- Modal -->
 <div class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="Screenshot" aria-hidden="true">
@@ -57,7 +57,7 @@ JS and PHP backend is completely original
                             <div class="card-body">
                                 <h4 class="card-title text-center">Image - <span style="color:grey">prnt.sc/</span><span id="code"></span></h4>
                             </div>
-                            <img id="screenshot" class="vr-tm-screenshot vr-js-viewlarge img-fluid" src="https://viljamiranta.fi/projects/prnt/backend.php?img=la112a&view=true" alt="Screenshot">
+                            <img id="screenshot" class="vr-tm-screenshot vr-js-viewlarge img-fluid" src="/loading.gif" alt="Screenshot">
                             <div class="card-footer align-items-center">
                                 <a id="like" href="#" data-code="" class="btn btn-primary float-left disabled">Like <i class="fas fa-thumbs-up"></i></a>
                                 <p class="text-muted vr-js-like vr-tm-likestext float-left">This image has <span id="likes">1</span> likes</p>
@@ -80,19 +80,31 @@ JS and PHP backend is completely original
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $q = $db->query("SELECT * FROM scores ORDER BY likes DESC LIMIT 10");
-                                            $f = $q->fetchAll();
-                                            $n = 1;
-
-                                            foreach ($f as $row) {
-                                            ?>
+                                            if($config["demo"])
+                                            {
+                                                ?>
                                                 <tr>
-                                                    <th><?php echo $n; ?></th>
-                                                    <td><a href="#" class="gotoImg" data-code="<?php echo $row["code"]; ?>"><span color="grey">prnt.sc/</span><?php echo $row["code"]; ?></a></td>
-                                                    <td><?php echo $row["likes"]; ?></td>
+                                                    <h3>Not available in demo!</h3>
                                                 </tr>
-                                            <?php
-                                                $n++;
+                                                <?php
+                                            }
+                                            else
+                                            {
+                                                require("db.php");
+                                                $q = $db->query("SELECT * FROM scores ORDER BY likes DESC LIMIT 10");
+                                                $f = $q->fetchAll();
+                                                $n = 1;
+
+                                                foreach ($f as $row) {
+                                                ?>
+                                                    <tr>
+                                                        <th><?php echo $n; ?></th>
+                                                        <td><a href="#" class="gotoImg" data-code="<?php echo $row["code"]; ?>"><span color="grey">prnt.sc/</span><?php echo $row["code"]; ?></a></td>
+                                                        <td><?php echo $row["likes"]; ?></td>
+                                                    </tr>
+                                                <?php
+                                                    $n++;
+                                                }
                                             }
                                             ?>
                                         </tbody>
@@ -107,8 +119,8 @@ JS and PHP backend is completely original
     </div>
     <p class="text-muted">Created by: <a href="https://viljamiranta.fi/">Viljami Ranta</a></p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/projects/prnt/js/bootstrap.min.js"></script>
-    <script src="/projects/prnt/js/backend.js?v=6"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/backend.js?v=6"></script>
 </body>
 
 </html>

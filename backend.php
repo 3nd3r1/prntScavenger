@@ -1,8 +1,11 @@
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
+
+$config["demo"] = true;
+
 use duzun\hQuery;
-hQuery::$cache_path = $_SERVER["DOCUMENT_ROOT"]."/projects/prnt/cache";
+hQuery::$cache_path = $_SERVER["DOCUMENT_ROOT"]."/cache";
 hQuery::$cache_expires = 360000;
 
 header("content-type: image/jpg");
@@ -24,6 +27,10 @@ if(isset($_GET["img"]))
         $d = hQuery::fromURL($src);
         $image = $d->html();
         echo $image;
+    }
+    elseif($config["demo"])
+    {
+        echo '0';
     }
     else
     {
