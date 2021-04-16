@@ -18,6 +18,3 @@ PrntScavenger is open-source so feel free to host it.
 - Run this command as admin:
 ```php -S localhost:5000```
 - Open a browser and navigate to localhost:5000!
-
-# Live demo
-https://viljamiranta.fi/projects/prnt/
