@@ -1,4 +1,4 @@
-# prntScavenger
+# prntScavenger (NO LONGER WORKS)
 Website that let's you find random prnt.sc screenshots.
 
 # What?
