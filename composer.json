@@ -1,0 +1,13 @@
+{
+    "name": "eavinrl/prnt-scavenger",
+    "type": "project",
+    "authors": [
+        {
+            "name": "3nd3r1",
+            "email": "ender.spam.guru@gmail.com"
+        }
+    ],
+    "require": {
+        "duzun/hquery": "^3.1"
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e744f651b3f9302938b57bc50acfc47f",
+    "packages": [
+        {
+            "name": "duzun/hquery",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/duzun/hQuery.php.git",
+                "reference": "2448d48925c027ab7fcbc6331c36a38eb42cf9e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/duzun/hQuery.php/zipball/2448d48925c027ab7fcbc6331c36a38eb42cf9e0",
+                "reference": "2448d48925c027ab7fcbc6331c36a38eb42cf9e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "symfony/css-selector": "*",
+                "symfony/dom-crawler": "*"
+            },
+            "suggest": {
+                "php-http/discovery": "Might be required by hQuery::sendRequest()",
+                "php-http/message": "Might be required by hQuery::fromHTML($message) or hQuery::fromURL()",
+                "php-http/socket-client": "Could be used to make HTTP requests before calling hQuery::fromHTML($message)"
+            },
+            "type": "library",
+            "extra": {
+                "apigen/apigen": "*",
+                "php-http/mock-client": "*",
+                "php-http/discovery": "*",
+                "guzzlehttp/psr7": "*"
+            },
+            "autoload": {
+                "psr-0": {
+                    "hQuery": "src/"
+                },
+                "psr-4": {
+                    "duzun\\": "src/"
+                },
+                "classmap": [
+                    "hquery.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dumitru Uzun",
+                    "email": "contact@duzun.me",
+                    "homepage": "https://DUzun.Me",
+                    "role": "Author"
+                }
+            ],
+            "description": "An extremely fast web scraper that parses megabytes of HTML in a blink of an eye. No dependencies. PHP5+",
+            "homepage": "https://duzun.me/playground/hquery",
+            "keywords": [
+                "broken-html",
+                "crawling",
+                "css-selectors",
+                "efficient",
+                "fast-parser",
+                "fastest",
+                "html",
+                "http",
+                "index",
+                "invalid",
+                "invalid-html",
+                "jquery-like",
+                "jquery-selectors",
+                "parser",
+                "php",
+                "psr-7",
+                "scraper",
+                "scraping",
+                "selectors",
+                "url",
+                "web",
+                "xhtml",
+                "xml"
+            ],
+            "support": {
+                "email": "contact@duzun.me",
+                "issues": "https://github.com/duzun/hQuery.php/issues",
+                "source": "https://github.com/duzun/hQuery.php"
+            },
+            "time": "2023-08-26T15:22:31+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

@@ -1,5 +1,5 @@
 <?php
-$config["demo"] = true;
+$config["demo"] = false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +91,7 @@ $config["demo"] = true;
                                             else
                                             {
                                                 require("db.php");
-                                                $q = $db->query("SELECT * FROM scores ORDER BY likes DESC LIMIT 10");
+                                                $q = $db->runQuery("SELECT * FROM scores ORDER BY likes DESC LIMIT 10");
                                                 $f = $q->fetchAll();
                                                 $n = 1;
 
