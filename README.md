@@ -1,6 +1,8 @@
 # prntScavenger
 Website that let's you find random prnt.sc screenshots.
 
+Live preview: [prnt-scavenger.onrender.com](https://prnt-scavenger.onrender.com/)
+
 ## What?
 Prnt.sc is a site that lets you upload screenshots so you can share them with a short link. The link is so short and there is so many screenshots that it's easy to put six random numbers and letters and find someones screenshot. So this became a trend and I decided to make a site that let's you do this faster.
 
